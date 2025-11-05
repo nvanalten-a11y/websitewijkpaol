@@ -1,0 +1,468 @@
+/* Globale Reset & Basis Typografie */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+    scroll-behavior: smooth; /* Vloeiend scrollen naar secties */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #E91E63; /* Primaire kleur */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Knoppen (Buttons) */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background-color: #E91E63; /* Roze */
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #C2185B;
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background-color: #2196F3; /* Blauw */
+    color: white;
+}
+
+.btn.secondary:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+}
+
+/* Header & Navigatie */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    padding: 5px 0;
+}
+
+.logo {
+    height: 60px; /* Grootte logo aanpassen */
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #E91E63; /* Roze hover */
+}
+
+/* NIEUWE: Social Media Icoontjes Stijl (Header) */
+.social-links a {
+    font-size: 1.2em; /* Grootte van de icoontjes */
+    margin-left: 15px;
+    color: #2196F3; /* Blauw als standaardkleur */
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #E91E63; /* Roze hoverkleur */
+}
+
+/* Secties */
+.content-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Achtergronden */
+.primary-bg {
+    background-color: #E91E63;
+    color: white;
+}
+
+.primary-bg h2 {
+    color: white;
+}
+
+.primary-bg a {
+    color: white;
+}
+
+.accent-bg {
+    background-color: #FFC107; /* Geel/Oranje accent */
+    color: #333;
+}
+
+/* Hero Sectie (Home) */
+.hero {
+    background: url('https://via.placeholder.com/1920x600/2196F3/FFFFFF?text=P+Wijk+AOL+-+Jouw+Wijk+Foto') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Donkere overlay */
+}
+
+/* ... (Bestaande CSS blijft staan) ... */
+
+/* Hero Sectie (Home) AANPASSINGEN voor de afbeelding */
+.hero {
+    /* ... (bestaande hero stijlen) ... */
+}
+
+.hero .container {
+    z-index: 1;
+    display: flex; /* Maak de container een flex-container */
+    flex-direction: column; /* Stapel de items verticaal */
+    align-items: center; /* Centreer de items horizontaal */
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 20px; /* Meer ruimte onder de H1 */
+}
+
+.home-hero-image {
+    width: 100%; /* Zorgt dat de afbeelding responsief is */
+    height: auto; /* Behoudt de aspect ratio */
+    display: block; /* Verwijdert extra ruimte onder de afbeelding */
+}
+
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* NIEUW: Stijl voor de knoppen-container in de Hero sectie */
+.hero-buttons {
+    display: flex;
+    gap: 20px; /* Ruimte tussen de knoppen */
+    margin-bottom: 30px; /* Ruimte onder de knoppen en boven de tekst */
+    flex-wrap: wrap; /* Zorgt ervoor dat knoppen onder elkaar gaan op mobiel */
+    justify-content: center;
+}
+
+/* Pas bestaande .hero p aan zodat de tekst boven de knoppen komt */
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px; /* Zorg voor voldoende ruimte boven de knoppen */
+}
+
+/* Responsiviteit voor knoppen op mobiel */
+@media (max-width: 500px) {
+    .hero-buttons {
+        flex-direction: column; /* Zet knoppen onder elkaar op zeer kleine schermen */
+        gap: 10px;
+    }
+    .hero-buttons .btn {
+        width: 100%; /* Maak knoppen even breed als de container op mobiel */
+    }
+}
+
+/* ... (Bestaande Media Queries blijven staan) ... */
+
+@media (max-width: 768px) {
+    
+    .hero h1 {
+        font-size: 3em;
+        margin-bottom: 15px; /* Pas marge aan voor mobiel */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Pas font-size aan voor mobiel */
+    }
+
+    /* ... (Overige mobiele stijlen) ... */
+}
+}
+
+/* Activiteiten Kalender Stijl */
+.section-description {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    font-style: italic;
+    color: #555;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.calendar-item {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+}
+
+.calendar-item h3 {
+    color: #2196F3; /* Blauw */
+    margin-top: 10px;
+}
+
+.date-badge {
+    display: inline-block;
+    background-color: #E91E63;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.note {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+}
+
+/* Sponsoren Grid Stijl */
+.sponsors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.sponsor-item {
+    padding: 20px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.sponsor-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.sponsor-item h4 {
+    color: #E91E63;
+}
+
+/* Contact Formulier Stijl */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #333; /* Terug naar donkere tekst op witte achtergrond */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2196F3;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button.btn.secondary {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Stijl voor de NIEUWE NAW-sectie */
+.contact-details {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.15); /* Subtiele, lichtgrijze/witte achtergrond in de roze sectie */
+    border-radius: 10px;
+    text-align: center;
+    color: white; /* Tekstkleur is wit voor contrast */
+}
+
+.contact-details h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #FFC107; /* Geel/Oranje accentkleur */
+}
+
+.contact-details p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.contact-details p br {
+    display: block;
+    content: "";
+    margin-top: 5px; /* Creëert een kleine verticale ruimte tussen de regels */
+}
+
+/* Footer (Aangepast met Social Media) */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* NIEUWE: Footer Layout */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* NIEUWE: Social Links in Footer */
+.social-links.footer-social {
+    margin-bottom: 10px;
+}
+
+.social-links.footer-social a {
+    color: white; /* Witte icoontjes in de donkere footer */
+    margin: 0 10px;
+}
+
+.social-links.footer-social a:hover {
+    color: #FFC107; /* Geel/Oranje hover in de footer */
+}
+
+footer a {
+    color: #FFC107;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries voor Responsiviteit (Mobiel Eerst) */
+@media (max-width: 768px) {
+    
+    .hero h1 {
+        font-size: 3em;
+    }
+
+    /* Navigatie aanpassen voor mobiel */
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: space-around;
+        padding-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+
+    /* NIEUWE: Social links onder de navigatie op mobiel */
+    .header-social {
+        margin-top: 10px;
+    }
+
+    .content-section {
+        padding: 50px 0;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+}
