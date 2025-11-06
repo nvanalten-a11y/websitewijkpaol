@@ -465,4 +465,45 @@ footer a:hover {
     h2 {
         font-size: 2em;
     }
+
+}
+/* Stijlen voor de Fotocarrousel Sectie */
+.carrousel-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* De container die horizontaal scrollen mogelijk maakt */
+.carrousel-wrapper {
+    display: flex;
+    overflow-x: scroll; /* Zorgt voor de horizontale scrollbalk */
+    scroll-snap-type: x mandatory; /* Zorgt ervoor dat scrollen stopt bij elk item */
+    -webkit-overflow-scrolling: touch; /* Vloeiend scrollen op iOS */
+    margin-top: 40px;
+    padding-bottom: 20px; /* Ruimte voor scrollbalk */
+}
+
+.carrousel-item {
+    flex: 0 0 100%; /* Zorgt ervoor dat elk item 100% van de breedte van de wrapper inneemt */
+    scroll-snap-align: center; /* Lijn het item uit in het midden van het snap-punt */
+    padding: 0 10px;
+}
+
+.carrousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Verberg de scrollbar in de meeste browsers voor een cleaner look */
+.carrousel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+.carrousel-wrapper {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
